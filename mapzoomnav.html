@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map Zoom/Nav</title>
+    <!--[if gte mso 15]>
+            <style type="text/css">
+                table {
+                    font-size: 1px;
+                    line-height: 0;
+                    mso-margin-top-alt: 1px;
+                    mso-line-height-rule: exactly;
+                }
+
+                * {
+                    mso-line-height-rule: exactly;
+                }
+            </style>
+        <![endif]-->
+    <style type="text/css">
+        /* ----- Reset ----- */
+
+        html,
+        body {
+            width: 100% !important;
+            height: 100% !important;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            margin: 0 !important;
+            padding: 0 !important;
+            background-color: #ffffff !important;
+        }
+
+        #outlook a {
+            padding: 0;
+        }
+
+        .ExternalClass {
+            width: 100%;
+        }
+
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+            line-height: 100%;
+        }
+
+        #body-table {
+            margin: 0;
+            padding: 0;
+            width: 100% !important;
+            height: 100% !important;
+            line-height: 100% !important;
+        }
+
+        img {
+            outline: none;
+            text-decoration: none;
+            -ms-interpolation-mode: bicubic;
+        }
+
+        a img {
+            border: none;
+        }
+
+        .image-fix {
+            display: block;
+        }
+
+        table td {
+            border-collapse: collapse;
+        }
+
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+
+        .yshortcuts a {
+            border-bottom: none !important;
+        }
+
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* ----- Mobile ----- */
+
+        @media screen and (max-width: 600px) {}
+
+        .main_map_cont {
+          background-position: 50% 50%;
+        background-image: url('https://em.realtime.email/service/rte?kind=livemap&id=1849813878&esp_uid=%%subid%%&dim0=%%subid%%&esp_storeid=%%Test_Store_ID%%&esp_maplocation=%%Map_Location%%');
+            background-repeat: no-repeat;
+            -webkit-transition: all ease 0.2s;
+            -moz-transition: all ease 0.2s;
+            -o-transition: all ease 0.2s;
+            -ms-transition: all ease 0.2s;
+            transition: all ease 0.2s;
+            overflow: hidden;
+            width: 320px;
+            height: 320px;
+        }
+
+        #nav-btn-1:checked ~  div.main_map_cont {
+           background-position: 50% 0%;
+        }
+     #nav-btn-2:checked ~  div.main_map_cont {
+           background-position: 100% 0%;
+        }
+           #nav-btn-3:checked ~  div.main_map_cont {
+           background-position: 100% 100%;
+        }
+    </style>
+
+</head>
+
+<body style="background: #ffffff;" bgcolor="#ffffff">
+    <table id="body-table" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+        <tr>
+            <td align="center" valign="top">
+                <table class="container" width="600" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td align="center">
+                                       
+                                        <div style="max-height:0;max-width:0;overflow:visible!important;">
+                                        <input type="radio" id="nav-btn-1" name="nav-btn" style="display:none;">
+                                        <input type="radio" id="nav-btn-2" name="nav-btn" style="display:none;">
+                                        <input type="radio" id="nav-btn-3" name="nav-btn" style="display:none;">
+                                        <input type="radio" id="nav-btn-4" name="nav-btn" style="display:none;">
+                                         <div style="max-height:0;max-width:0;overflow:visible!important;">
+                                         <!-- Navigation arrows -->
+                               
+                                            <div id="action-hover" style="position:relative;Margin-top:10px;Margin-left:250px;display:inline-block;z-index: 999;">
+                                                 
+                                                 <a href="#" style="width:20px;height:20px;background-color:tomato;color:snow;padding: 5px;"> <label for="nav-btn-1">Up </label></a>
+                                                
+                                                </div>  
+                                                  <div id="action-hover-2" style="position:relative;Margin-top:10px;Margin-left:300px;display:inline-block;z-index: 999;">
+                                                 
+                                                 <a href="#" style="width:20px;height:20px;background-color:tomato;color:snow;padding: 5px;"> <label for="nav-btn-2">up Right </label></a>
+                                                
+                                                </div> 
+                                                       <div id="action-hover-3" style="position:relative;Margin-top:200px;Margin-left:300px;display:inline-block;z-index: 999;">
+                                                 
+                                                 <a href="#" style="width:20px;height:20px;background-color:tomato;color:snow;padding: 5px;"> <label for="nav-btn-3"> down Right </label></a>
+                                                
+                                                </div>                                       
+                                                 <!-- End Navigation Arrows -->
+                                                                     
+                                      
+                                                </div>
+                 
+                                       <div style="position:relative;Margin-top:10px;Margin-left:140px;z-index: 0;" class="main_map_cont">
+                                                    
+                                                        </div>
+                                            </div>
+                                          
+                                        
+                                    </td>
+                                </tr>
+                               
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
